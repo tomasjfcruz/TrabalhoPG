@@ -38,16 +38,3 @@ fun SpaceShip.moveShots(area: Area): SpaceShip {
     return this.copy(shots = shots.moveAll(area))
 }
 
-/*
-//versao sem CorceIn e nem copy, depois apagar se desnecessario
-fun Ship.boundary(mouseX: Int, maxWidth: Int = 700): Ship {
-    val maxX = maxWidth - this.width   //o valor máximo que a nave pode ir até não passar do ecrã é o maximo do Canvas menos o seu tamanho
-    val newX = when {
-        mouseX < 0 -> 0            //faz com que a nave não passe do limite esquerdo, ao fazer com que a posição do mouse nunca possa ser menor que 0
-        mouseX > maxX -> maxX      //faz a mesma coisa mas para o limite direiro, a posição do rato nunca pode ser maior que o valor maximo defenido
-        else -> mouseX
-    }
-    return Ship(Position(newX,this.pos.y), this.color, this.width, this.height)
-}
-
- */

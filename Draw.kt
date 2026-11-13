@@ -18,7 +18,7 @@ fun Canvas.drawGame(g: Game) {
     erase()
     drawShip(g.ship)   //desenhar a nave
     g.ship.shots.forEach { drawShot (it) } //desenhar os tiros da nave
-    g.alienShots.forEach { drawShot (it) } //desenhar os aliens
+    g.alienShots.forEach { drawShot (it) } //desenhar os tiros dos aliens
     if (g.over)        //se a condição de o jogo acabar é ativada, escreve a frase "Game over" na tela
         drawGameOver()
 }

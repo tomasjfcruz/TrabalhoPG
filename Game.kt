@@ -16,14 +16,14 @@ data class Game(
     val over: Boolean
 )
 
-//Funçao que retorna o jogo com a nave a disparar
+//Funçao que retorna uma copia do jogo com a nave a disparar
 fun Game.fire(): Game {
     return if (this.over) this //se a condição se o jogo acabar for ativada, retorna o jogo sem mudanças para não ser possível disparar mais a nave depois de o jogo acaba
     else
         this.copy(ship = ship.fire())
 }
 
-//Função que retorna o jogo com a nave em movimento
+//Função que retorna uma copia do jogo com a nave em movimento
 fun Game.moveShip(x: Int): Game {
     return if (this.over) this   //se a condição se o jogo acabar for ativada, retorna o jogo sem mudanças para não ser possível mover mais a nave depois de o jogo acaba
     else
